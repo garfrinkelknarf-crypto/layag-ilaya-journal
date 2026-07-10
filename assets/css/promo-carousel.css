@@ -1,0 +1,107 @@
+/* Promo video carousel — Updates page.
+   Loaded only on /updates/index.html, alongside site.css.
+   Uses the same variables already defined there. Manual navigation only
+   (no auto-advance) since auto-switching away from a playing video is bad UX. */
+
+.promo-carousel{
+  max-width: 480px;
+  margin: 1.4rem auto 0;
+  position: relative;
+}
+
+.promo-viewport{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--radius-lg, var(--radius));
+  overflow: hidden;
+  background: var(--navy);
+  box-shadow: 0 10px 26px rgba(22,41,74,.16);
+}
+
+.promo-slide{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+
+.promo-slide.is-active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.promo-slide iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.promo-label{
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  padding: .8rem 1rem;
+  background: linear-gradient(to bottom, rgba(10,18,32,.75), rgba(10,18,32,0));
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.promo-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(10,18,32,.55);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: background .15s ease;
+}
+.promo-arrow:hover{ background: var(--gold); }
+.promo-arrow:focus-visible{ outline: 2px solid var(--gold); outline-offset: 2px; }
+.promo-prev{ left: 8px; }
+.promo-next{ right: 8px; }
+.promo-arrow svg{ width: 16px; height: 16px; }
+
+.promo-dots{
+  display: flex;
+  justify-content: center;
+  gap: .45rem;
+  margin-top: .9rem;
+}
+.promo-dot{
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--line);
+  cursor: pointer;
+  padding: 0;
+}
+.promo-dot.is-active{ background: var(--gold); }
+.promo-dot:focus-visible{ outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.promo-counter{
+  text-align: center;
+  font-size: .78rem;
+  color: var(--muted);
+  margin-top: .5rem;
+  font-family: var(--font-sans);
+}
+
+@media (max-width: 480px){
+  .promo-carousel{ max-width: 100%; }
+}
