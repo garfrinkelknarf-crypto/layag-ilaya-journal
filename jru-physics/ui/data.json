@@ -15,12 +15,12 @@
    "chips": [
     "30 slides",
     "Read and listen",
-    "Nothing to submit here"
+    "Ends with a completion code"
    ],
    "steps": [
     "Click through every slide to the end. The counter shows how many are left.",
     "Take notes on the examples. You will use them in the Activity.",
-    "When you reach the last slide, continue to the Activity."
+    "On the last slide, find the completion code and enter it in the checkpoint below the slides. Then continue to the Activity."
    ],
    "next": {
     "label": "Week 1 Activity: Measurement Quick Check",
