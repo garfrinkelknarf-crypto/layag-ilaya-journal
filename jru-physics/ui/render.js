@@ -38,13 +38,16 @@ function draw(D,mode){
  var names={lesson:'Lesson',activity:'Activity',quiz:'Quiz'},order=['lesson','activity','quiz'];
  var html='<style>'+css+'</style>';
  if(mode==='next'){
-  var n=p.next;html+='<div class="next '+(n.type==='lesson'?'':'r')+'"><div><small>NEXT STEP</small><b>'+esc(n.label)+'</b></div><a class="btn" target="_top" href="'+D.base+n.slug+'/">Continue →</a></div>';
+  var n=p.next;html+='<div class="next '+(n.type==='lesson'?'':'r')+'"><div><small>NEXT STEP</small><b>'+esc(n.label)+'</b></div><a class="btn" href="'+D.base+n.slug+'/" data-go="1">Continue →</a></div>';
   return html}
  html+='<div class="card"><div class="hero '+cls+'">'+atom+'<div class="steps">'+order.map(function(o,i){var on=o===T;return '<span class="st'+(on?' on '+(o==='lesson'?'g':'r'):'')+'"><i>'+(i+1)+'</i>'+names[o]+'</span>'}).join('')+'</div>';
  html+='<div class="kick">WEEK '+p.week+' · '+names[T].toUpperCase()+'</div><h1>'+esc(p.title)+'</h1><div class="top">'+esc(p.topic)+'</div>';
  html+='<div class="chips"><span class="chip clo" title="'+esc(D.clo[p.clo])+'">'+p.clo.toUpperCase()+'</span>'+p.chips.map(function(c){return '<span class="chip">'+esc(c)+'</span>'}).join('')+'</div></div>';
  html+='<div class="body"><span class="key '+cls+'"><i></i>'+(red?'RED = you answer or do this':'GREEN = slides and discussion')+'</span><ol>'+p.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ol>'+(p.covers?'<div class="cov">Covers: '+esc(p.covers)+'</div>':'')+'</div></div>';
  return html}
+
+function go(u){try{var p=window.parent,a=p.document.createElement('a');a.href=u;a.style.display='none';p.document.body.appendChild(a);a.click();return}catch(e){}window.open(u,'_blank')}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-go]');if(a){e.preventDefault();go(a.href)}});
 var mode=(window.__MODE||'head');
 fetch(B+'data.json?v='+Date.now()).then(function(r){return r.json()}).then(function(D){document.body.innerHTML=draw(D,mode);[60,300,900,2000].forEach(function(ms){setTimeout(function(){window.dispatchEvent(new Event('resize'));window.dispatchEvent(new Event('load'))},ms)})}).catch(function(){document.body.innerHTML='<p style="font-family:Arial;color:#51657f">Loading…</p>'});
 })(window.__K,'https://raw.githubusercontent.com/garfrinkelknarf-crypto/layag-ilaya-journal/main/jru-physics/ui/');
