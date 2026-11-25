@@ -1,0 +1,16 @@
+{
+ "base":"https://www.openlearning.com/jru/courses/physics/",
+ "clo":{"clo1":"Show mathematical and scientific skills and knowledge on the fundamental concepts of Physics, including mechanics.","clo2":"Manifest skills in carrying out designated tasks needed for gaining knowledge in different areas of Physics.","clo3":"Manifest thinking and writing skills in accomplishing written and virtual outputs from designated tasks."},
+ "pages":{
+  "w1-lesson":{"week":1,"type":"lesson","title":"Can We Trust What We Measure?","topic":"Scientific Method and Measurement","clo":"clo1","chips":["30 slides","Read and listen","Nothing to submit here"],
+    "steps":["Click through every slide to the end. The counter shows how many are left.","Pause on each example and try the question before the next slide reveals it.","When you reach the last slide, continue to the Activity."],
+    "next":{"label":"Week 1 Activity: Measurement Quick Check","slug":"week_1_activity_quick_check","type":"activity"}},
+  "w1-activity":{"week":1,"type":"activity","title":"Measurement Quick Check","topic":"Scientific Method and Measurement","clo":"clo1","chips":["5 questions","Multiple choice","Self-marking"],
+    "covers":"Scientific method, units, accuracy vs precision, Weber’s Law",
+    "steps":["Join the Teams class meeting below when your instructor posts the schedule.","Answer all 5 questions. You see feedback right after each answer.","Press Submit answers at the end. You cannot move on until you finish."],
+    "next":{"label":"Week 1 Formative Quiz","slug":"week_1_formative_quiz_physics_foundations_for_psychology","type":"quiz"}},
+  "w1-quiz":{"week":1,"type":"quiz","title":"Formative Quiz: Physics Foundations","topic":"Scientific Method and Measurement","clo":"clo1","chips":["8 questions","Multiple choice","Self-marking"],
+    "steps":["Answer all 8 questions. Use the calculator on your device for the computation items.","You see feedback after each answer, so read the explanation before moving on.","Press Submit answers at the end to finish the week."],
+    "next":{"label":"Week 2 Lesson","slug":"week_2_lesson_dimensional_analysis_significant_figures_and_lab_safety","type":"lesson"}}
+ }
+}
