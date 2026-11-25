@@ -1,6 +1,6 @@
 (function(K,B){
 var css=`
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#1b2a41;line-height:1.5}
+*{box-sizing:border-box}html,body{overflow:hidden}body{margin:0;padding:2px 2px 10px;font-family:Arial,Helvetica,sans-serif;color:#1b2a41;line-height:1.5}
 .card{border-radius:16px;overflow:hidden;border:1px solid #d7e0ee;background:#fff}
 .hero{position:relative;color:#fff;padding:20px 22px 18px;background:linear-gradient(135deg,#002660 0%,#0b3d91 62%,#0b7a3e 150%)}
 .hero.r{background:linear-gradient(135deg,#002660 0%,#0b3d91 55%,#8e1b1b 160%)}
@@ -46,5 +46,5 @@ function draw(D,mode){
  html+='<div class="body"><span class="key '+cls+'"><i></i>'+(red?'RED = you answer or do this':'GREEN = slides and discussion')+'</span><ol>'+p.steps.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ol>'+(p.covers?'<div class="cov">Covers: '+esc(p.covers)+'</div>':'')+'</div></div>';
  return html}
 var mode=(window.__MODE||'head');
-fetch(B+'data.json?v='+Date.now()).then(function(r){return r.json()}).then(function(D){document.body.innerHTML=draw(D,mode)}).catch(function(){document.body.innerHTML='<p style="font-family:Arial;color:#51657f">Loading…</p>'});
+fetch(B+'data.json?v='+Date.now()).then(function(r){return r.json()}).then(function(D){document.body.innerHTML=draw(D,mode);[60,300,900,2000].forEach(function(ms){setTimeout(function(){window.dispatchEvent(new Event('resize'));window.dispatchEvent(new Event('load'))},ms)})}).catch(function(){document.body.innerHTML='<p style="font-family:Arial;color:#51657f">Loading…</p>'});
 })(window.__K,'https://raw.githubusercontent.com/garfrinkelknarf-crypto/layag-ilaya-journal/main/jru-physics/ui/');
