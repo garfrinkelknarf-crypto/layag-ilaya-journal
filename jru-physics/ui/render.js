@@ -4,7 +4,7 @@ var css=`
 .card{border-radius:16px;overflow:hidden;border:1px solid #d7e0ee;background:#fff}
 .hero{position:relative;color:#fff;padding:20px 22px 18px;background:linear-gradient(135deg,#002660 0%,#0b3d91 62%,#0b7a3e 150%)}
 .hero.r{background:linear-gradient(135deg,#002660 0%,#0b3d91 55%,#8e1b1b 160%)}
-.hero svg{position:absolute;right:-18px;top:-8px;height:130%;opacity:.28;pointer-events:none}
+.hero svg{position:absolute;right:-60px;top:-20px;height:140%;opacity:.16;pointer-events:none}
 .steps{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;position:relative}
 .st{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 11px;font-size:11px;font-weight:700;letter-spacing:.04em;background:rgba(255,255,255,.1);color:#b9c9ea;border:1px solid rgba(255,255,255,.18)}
 .st i{width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,.2);display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:10px}

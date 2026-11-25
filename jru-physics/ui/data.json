@@ -3,7 +3,7 @@
  "clo":{"clo1":"Show mathematical and scientific skills and knowledge on the fundamental concepts of Physics, including mechanics.","clo2":"Manifest skills in carrying out designated tasks needed for gaining knowledge in different areas of Physics.","clo3":"Manifest thinking and writing skills in accomplishing written and virtual outputs from designated tasks."},
  "pages":{
   "w1-lesson":{"week":1,"type":"lesson","title":"Can We Trust What We Measure?","topic":"Scientific Method and Measurement","clo":"clo1","chips":["30 slides","Read and listen","Nothing to submit here"],
-    "steps":["Click through every slide to the end. The counter shows how many are left.","Pause on each example and try the question before the next slide reveals it.","When you reach the last slide, continue to the Activity."],
+    "steps":["Click through every slide to the end. The counter shows how many are left.","Take notes on the examples. You will use them in the Activity.","When you reach the last slide, continue to the Activity."],
     "next":{"label":"Week 1 Activity: Measurement Quick Check","slug":"week_1_activity_quick_check","type":"activity"}},
   "w1-activity":{"week":1,"type":"activity","title":"Measurement Quick Check","topic":"Scientific Method and Measurement","clo":"clo1","chips":["5 questions","Multiple choice","Self-marking"],
     "covers":"Scientific method, units, accuracy vs precision, Weber’s Law",
